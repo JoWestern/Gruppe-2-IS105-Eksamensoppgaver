@@ -1,6 +1,4 @@
-Chapter 2 Modul 3
-
-Oppgave 2.26
+---Chapter 2 Modul 3, Oppgave 2.26---
 
 In Section 2.3, we described a program that copies the contents of one file to a destination file. This program works by first prompting the user for the name of the source and destination files. Write this program using either the Windows or POSIX API. Be sure to include all necessary error checking, including ensuring that the source file exists. 
 
@@ -46,9 +44,7 @@ Figur 1.4
 Her benytter vi DTrace for å se hvordan kjøringen av programmet blir utført.
 
 
-Chapter 3, Modul 3
-
-Oppgave 3.1
+---Chapter 3, Modul 3, Oppgave 3.1---
 
 Using the program shown in Figure 3.30, explain what the output will be at LINE A.
 
@@ -75,7 +71,7 @@ Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at v
 
 
 
-Oppgave 3.2
+---Chapter 3 Modul 3, Oppgave 3.2---
 
 Including the initial parent process, how many processes are created by the program shown in Figure 3.31 (referert til som figur 3.1 her)?
 
