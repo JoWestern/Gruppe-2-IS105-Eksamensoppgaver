@@ -8,7 +8,9 @@ specs:
 
 
 Prosessor: 2.4 GHz Dual-Core Intel Core i5 
+
 Minne: 8 GB 1600 MHz DDR3 
+
 Grafikk: Intel Iris 1536 MB
 
 
