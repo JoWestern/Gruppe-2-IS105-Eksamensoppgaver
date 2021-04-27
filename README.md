@@ -2,11 +2,14 @@
 Dette er et repository som går gjennom Programming Problems oppgavene til innlevering i IS-105.
 Under vil det være screenshots og eksempler fra terminal som viser gjennomføring av kildekoden til hvert spørsmål som ligger i dette repository'et.
 
-Programming Problems
 
 Modul 3
 
 Oppgave 2.26
+
+In Section 2.3, we described a program that copies the contents of one file to a destination file. This program works by first prompting the user for the name of the source and destination files. Write this program using either the Windows or POSIX API. Be sure to include all necessary error checking, including ensuring that the source file exists. 
+
+Once you have correctly designed and tested the program, if you used a system that supports it, run the program using a utility that traces system calls. Linux systems provide the strace utility, and Solaris and Mac OSX systems use the dtrace command. As Windows systems do not provide such features, you will have to trace through the Windows version of this program using a debugger. 
 
 Hennviser til kildekode i repository fil: oppgave-2-26
 
@@ -36,5 +39,9 @@ Tilbake på figur 1.2 ser vi at etter kompileringen bruker vi ls kommandoen for 
 Deretter eksekverte vi filen ved å skrive ./a.out, og vi ser at koden fungerer siden vi får en prompt om skrive filnavnet vi vil kopiere. 
 Etter å har gitt programmet filen den ønsker vil den begynne å overføre informasjonen fra txt-fra.txt til txt-til.txt, så får vi prompt om at filen er kopiert riktig, og programmet avslutter.
 
+<img width="390" alt="Screen Shot 2021-04-27 at 12 38 02 PM" src="https://user-images.githubusercontent.com/79581649/116228341-757b3680-a755-11eb-891f-9295427e5d82.png">
+Figur 1.3
+
+Til slutt åpnet vi filene for å se om oppgaven var fullført og som vi ser på figur 1.3 er teksten fra txt-fra overført til txt-til.
 
 
