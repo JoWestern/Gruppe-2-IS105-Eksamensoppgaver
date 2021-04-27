@@ -7,14 +7,14 @@ Once you have correctly designed and tested the program, if you used a system th
 Hennviser til kildekode i repository fil: oppgave-2-26
 
 <img width="1152" alt="Screen Shot 2021-04-27 at 11 59 03 AM" src="https://user-images.githubusercontent.com/79581649/116223635-02bb8c80-a750-11eb-9603-ca4d7e355a60.png">
-Figur 1.1
+(figur 1.1)
 
 Først og fremst for å vite at alt skal fungere riktig når vi og andre skal bruke denne koden må vi sjekke hvilken versjon vi har.
 Vi bruker kommandoen g++ --version for å få nødvendig informasjon, og som vi ser bruker vi i dette eksempelet clang versjon 12.0.0.
 
 
 <img width="555" alt="Screen Shot 2021-04-27 at 11 52 59 AM" src="https://user-images.githubusercontent.com/79581649/116222787-2e8a4280-a74f-11eb-861d-1d973253e7ca.png">
-Figur 1.2
+(figur 1.2)
 
 Vi begynte med å lage en C++ fil med navn oppgave2_26 som inneholder kildekoden. 
 Deretter bruker vi kommandoen g++ for å kompilere koden, i C++ må vår .cpp kildefil bli kompilert til en a.out objektfil (vi kan også bruke -o for å gi den et eget navn) som er kjørbar. 
@@ -33,13 +33,13 @@ Deretter eksekverte vi filen ved å skrive ./a.out, og vi ser at koden fungerer 
 Etter å har gitt programmet filen den ønsker vil den begynne å overføre informasjonen fra txt-fra.txt til txt-til.txt, så får vi prompt om at filen er kopiert riktig, og programmet avslutter.
 
 <img width="390" alt="Screen Shot 2021-04-27 at 12 38 02 PM" src="https://user-images.githubusercontent.com/79581649/116228341-757b3680-a755-11eb-891f-9295427e5d82.png">
-Figur 1.3
+(figur 1.3)
 
 Til slutt åpnet vi filene for å se om oppgaven var fullført og som vi ser på figur 1.3 er teksten fra txt-fra overført til txt-til.
 
 
 <img width="945" alt="Screen Shot 2021-04-27 at 1 36 46 PM" src="https://user-images.githubusercontent.com/79581649/116235032-a52e3c80-a75d-11eb-9bd6-0608a82ac02b.png">
-Figur 1.4
+(figur 1.4)
 
 Her benytter vi DTrace for å se hvordan kjøringen av programmet blir utført.
 
@@ -49,7 +49,7 @@ Her benytter vi DTrace for å se hvordan kjøringen av programmet blir utført.
 Using the program shown in Figure 3.30, explain what the output will be at LINE A.
 
 <img width="331" alt="Screen Shot 2021-04-27 at 2 45 18 PM" src="https://user-images.githubusercontent.com/79581649/116243422-36ee7780-a767-11eb-81b6-db0b0e9ac201.png">
-Figur 2.1
+(figur 2.1)
 
 Dette er fork() programmet fra boken. Etter vi hadde lagd en fil med denne koden og skulle kompilere det i terminalen oppstod det en rekke feilmeldinger om pid og wait kommandoene. Dette skjønte vi ikke helt hvorfor oppstod siden programmet kommer fra læreboka, men til slutt fikk vi testet med å legge til #include <sys/wait.h> og da fungerte programmet slik det skulle.
 
@@ -57,14 +57,14 @@ Etter endringene ble kildekoden til oppgaven vist på figur 2.1.1:
 
 <img width="267" alt="Screen Shot 2021-04-27 at 2 58 23 PM" src="https://user-images.githubusercontent.com/79581649/116245291-1cb59900-a769-11eb-8478-d4aad19dba0b.png">
 
-Figur 2.1.1
+(figur 2.1.1)
 
 Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdokumentet. 
 
 
 <img width="431" alt="Screen Shot 2021-04-27 at 2 41 11 PM" src="https://user-images.githubusercontent.com/79581649/116242906-ae6fd700-a766-11eb-81df-26e1f5250cfc.png">
 
-Figur 2.2
+(figur 2.2)
 
 For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out.
 Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5, som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
@@ -78,7 +78,7 @@ Including the initial parent process, how many processes are created by the prog
 
 <img width="317" alt="Screen Shot 2021-04-27 at 3 19 46 PM" src="https://user-images.githubusercontent.com/79581649/116248286-05c47600-a76c-11eb-8a18-db91025ed779.png">
 
-Figur 3.1
+(figur 3.1)
 
 
 
