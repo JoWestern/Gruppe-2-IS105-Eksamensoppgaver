@@ -21,7 +21,7 @@ Vi bruker kommandoen g++ --version for å få nødvendig informasjon, og som vi 
 Figur 1.2
 
 Vi begynte med å lage en C++ fil med navn oppgave2_26 som inneholder kildekoden. 
-Deretter bruker vi kommandoen g++ for å kompilere koden, i C++ må vår .cpp kildefil bli kompilert til en /a.out objektfil som er kjørbar. 
+Deretter bruker vi kommandoen g++ for å kompilere koden, i C++ må vår .cpp kildefil bli kompilert til en a.out objektfil (vi kan også bruke -o for å gi den et eget navn) som er kjørbar. 
 Kildefilen vår inneholder flere filer med #include kommandoen, disse er kalt filhoder eller header files ofte i form av .h, .hpp eller .hxx. 
 Når vi kompilerer dette vil selve #include kommandoen bli byttet ut med alt innholdet til den inkluderte filen. 
 
