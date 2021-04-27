@@ -67,6 +67,7 @@ Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdok
 <img width="431" alt="Screen Shot 2021-04-27 at 2 41 11 PM" src="https://user-images.githubusercontent.com/79581649/116242906-ae6fd700-a766-11eb-81df-26e1f5250cfc.png">
 
 Figur 2.2
+For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med g++ kommandoen
 
 
 
