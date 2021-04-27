@@ -54,6 +54,7 @@ Using the program shown in Figure 3.30, explain what the output will be at LINE 
 
 <img width="331" alt="Screen Shot 2021-04-27 at 2 45 18 PM" src="https://user-images.githubusercontent.com/79581649/116243422-36ee7780-a767-11eb-81b6-db0b0e9ac201.png">
 Figur 2.1
+
 Dette er fork() programmet fra boken. Etter vi hadde lagd en fil med denne koden og skulle kompilere det i terminalen oppstod det en rekke feilmeldinger om pid og wait kommandoene. Dette skjønte vi ikke helt hvorfor oppstod siden programmet kommer fra læreboka, men til slutt fikk vi testet med å legge til #include <sys/wait.h> og da fungerte programmet slik det skulle.
 
 Etter endringene ble kildekoden til oppgaven vist på figur 2.1.1:
@@ -72,6 +73,16 @@ Figur 2.2
 For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out.
 Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5, som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
 
+
+
+Oppgave 3.2
+
+Including the initial parent process, how many processes are created by the program shown in Figure 3.31 (referert til som figur 3.1 her)?
+
+
+<img width="317" alt="Screen Shot 2021-04-27 at 3 19 46 PM" src="https://user-images.githubusercontent.com/79581649/116248286-05c47600-a76c-11eb-8a18-db91025ed779.png">
+
+Figur 3.1
 
 
 
