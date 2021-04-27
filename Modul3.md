@@ -51,6 +51,7 @@ Chapter 3, Modul 3
 Oppgave 3.1
 
 Using the program shown in Figure 3.30, explain what the output will be at LINE A.
+
 <img width="331" alt="Screen Shot 2021-04-27 at 2 45 18 PM" src="https://user-images.githubusercontent.com/79581649/116243422-36ee7780-a767-11eb-81b6-db0b0e9ac201.png">
 
 
