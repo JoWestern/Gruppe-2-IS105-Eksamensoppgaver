@@ -45,3 +45,9 @@ Figur 1.3
 Til slutt åpnet vi filene for å se om oppgaven var fullført og som vi ser på figur 1.3 er teksten fra txt-fra overført til txt-til.
 
 
+<img width="945" alt="Screen Shot 2021-04-27 at 1 36 46 PM" src="https://user-images.githubusercontent.com/79581649/116235032-a52e3c80-a75d-11eb-9bd6-0608a82ac02b.png">
+Figur 1.4
+
+Her benytter vi DTrace for å se hvordan kjøringen av programmet blir utført.
+
+
