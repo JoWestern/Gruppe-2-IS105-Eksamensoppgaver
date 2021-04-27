@@ -66,7 +66,7 @@ Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdok
 
 (figur 2.2)
 
-For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out.
+For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out. 
 Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5, som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
 
 
@@ -79,6 +79,13 @@ Including the initial parent process, how many processes are created by the prog
 <img width="317" alt="Screen Shot 2021-04-27 at 3 19 46 PM" src="https://user-images.githubusercontent.com/79581649/116248286-05c47600-a76c-11eb-8a18-db91025ed779.png">
 
 (figur 3.1)
+
+
+---Chapter 3 Modul 3, Oppgave 3.19---
+
+Using either a UNIX or a Linux system, write a C program that forks a child process that ultimately becomes a zombie process. This zombie process must remain in the system for at least 10 seconds. Process states can be obtained from the command ps −l The process states are shown below the S column; processes with a state of Z are zombies. The process identifier (pid) of the child process is listed in the PID column, and that of the parent is listed in the PPID column. Perhaps the easiest way to determine that the child process is indeed a zombie is to run the program that you have written in the background (using the &) and then run the command ps −l to determine whether the child is a zombie process. Because you do not want too many zombie processes existing in the system, you will need to remove the one that you have created. The easiest way to do that is to terminate the parent process using the kill command. For example, if the process id of the parent is 4884, you would enter kill −9 4884.
+
+
 
 
 
