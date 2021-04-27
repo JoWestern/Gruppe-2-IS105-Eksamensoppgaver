@@ -67,7 +67,8 @@ Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdok
 <img width="431" alt="Screen Shot 2021-04-27 at 2 41 11 PM" src="https://user-images.githubusercontent.com/79581649/116242906-ae6fd700-a766-11eb-81df-26e1f5250cfc.png">
 
 Figur 2.2
-For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med g++ kommandoen
+For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out.
+Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5, som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
 
 
 
