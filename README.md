@@ -6,8 +6,9 @@ Alle eksempler er utført på en Macbook Pro late 2013, med MacOS Big Sur versjo
 
 specs:
 
-Prosessor: 2.4 GHz Dual-Core Intel Core i5
-Minne: 8 GB 1600 MHz DDR3
+
+Prosessor: 2.4 GHz Dual-Core Intel Core i5 
+Minne: 8 GB 1600 MHz DDR3 
 Grafikk: Intel Iris 1536 MB
 
 
