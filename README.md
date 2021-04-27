@@ -11,3 +11,4 @@ Hennviser til kildekode i repository fil: oppgave-2-26
 
 https://github.com/TeacupMonkey/Gruppe-2-ProgrammingProblems/issues/1#issue-868666088
 
+
