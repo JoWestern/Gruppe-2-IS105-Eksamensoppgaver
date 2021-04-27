@@ -56,17 +56,19 @@ Using the program shown in Figure 3.30, explain what the output will be at LINE 
 Figur 2.1
 Dette er fork() programmet fra boken. Etter vi hadde lagd en fil med denne koden og skulle kompilere det i terminalen oppstod det en rekke feilmeldinger om pid og wait kommandoene. Dette skjønte vi ikke helt hvorfor oppstod siden programmet kommer fra læreboka, men til slutt fikk vi testet med å legge til #include <sys/wait.h> og da fungerte programmet slik det skulle.
 
-Etter endringene ble kildekoden til oppgaven seende slik ut:
+Etter endringene ble kildekoden til oppgaven vist på figur 2.1.1:
 
 <img width="267" alt="Screen Shot 2021-04-27 at 2 58 23 PM" src="https://user-images.githubusercontent.com/79581649/116245291-1cb59900-a769-11eb-8478-d4aad19dba0b.png">
 
-Figur 2.1.2
+Figur 2.1.1
+
 Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdokumentet. 
 
 
 <img width="431" alt="Screen Shot 2021-04-27 at 2 41 11 PM" src="https://user-images.githubusercontent.com/79581649/116242906-ae6fd700-a766-11eb-81df-26e1f5250cfc.png">
 
 Figur 2.2
+
 For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out.
 Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5, som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
 
