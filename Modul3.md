@@ -108,11 +108,13 @@ Etter å ha kompilert koden og lagd et objekt, så skal vi kjøre koden ./zombie
 
 ---Chapter 3 Modul 3, Oppgave 3.21---
 
-The Collatz conjecture concerns what happens when we take any positive integer n and apply the following algorithm: The conjecture states that when this algorithm is continually applied, all positive integers will eventually reach 1. For example, if n = 35, the sequence is35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1. Write a C program using the fork() system call that generates this sequence in the child process. The starting number will be provided from the command line. For example, if 8 is passed as a parameter on the com-mand line, the child process will output 8, 4, 2, 1. Because the parent and child processes have their own copies of the data, it will be necessary for the child to output the sequence. Have the parent invoke the wait() call to wait for the child process to complete before exiting the program. Per-form necessary error checking to ensure that a positive integer is passed on the command line. 
+The Collatz conjecture concerns what happens when we take any positive integer n and apply the following algorithm: The conjecture states that when this algorithm is continually applied, all positive integers will eventually reach 1. For example, if n = 35, the sequence is 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1. Write a C program using the fork() system call that generates this sequence in the child process. The starting number will be provided from the command line. For example, if 8 is passed as a parameter on the com-mand line, the child process will output 8, 4, 2, 1. Because the parent and child processes have their own copies of the data, it will be necessary for the child to output the sequence. Have the parent invoke the wait() call to wait for the child process to complete before exiting the program. Per-form necessary error checking to ensure that a positive integer is passed on the command line. 
 
 <img width="509" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116386857-7aee8480-a81a-11eb-9a53-84304474631f.png">
 
 (figur 3.4)
+
+For at koden skal kjøre trenger den et argument i form av heltall som den skal regne ut med collatz conjecture. Hvis vi ikke gir den noe tall vil den gi beskjed om at den trenger et argument. Etter vi har gitt den tallet vil den begynne å regne ut ved å bruke teorien bak the collatz conjecture. I eksempelet på figur 3.4 ga vi programmet tallet 10. Programmet begynner da med å sjekke om det er et partall, hvis det er sant vil neste tall være halvparten, hvis tallet nå er et oddetall vil det bli tredoblet og addert med 1, og dette fortsetter fram til tallet blir 1. Prinsippet bak denne formelen er at uansett hvilket positivt tall n man putter inn vil svaret alltid bli 1. 
 
 
 
