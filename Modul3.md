@@ -85,6 +85,20 @@ Including the initial parent process, how many processes are created by the prog
 
 Using either a UNIX or a Linux system, write a C program that forks a child process that ultimately becomes a zombie process. This zombie process must remain in the system for at least 10 seconds. Process states can be obtained from the command ps −l The process states are shown below the S column; processes with a state of Z are zombies. The process identifier (pid) of the child process is listed in the PID column, and that of the parent is listed in the PPID column. Perhaps the easiest way to determine that the child process is indeed a zombie is to run the program that you have written in the background (using the &) and then run the command ps −l to determine whether the child is a zombie process. Because you do not want too many zombie processes existing in the system, you will need to remove the one that you have created. The easiest way to do that is to terminate the parent process using the kill command. For example, if the process id of the parent is 4884, you would enter kill −9 4884.
 
+<img width="497" alt="Screen Shot 2021-04-28 at 10 41 22 AM" src="https://user-images.githubusercontent.com/79581649/116374146-4f659d00-a80e-11eb-8979-931ce9499508.png">
+
+(figur 3.2)
+
+Kildekoden på figur 3.2 viser framgangsmåten for hvordan en zombie prosess blir dannet. For at zombien skal bli dannet i vår kode så må child prosessen avsluttes uten at parent prosessen har utløst en wait() kommando. Her vil child prosessen utløse en exit() som sender et signal til parent prosessen som ikke blir oppfattet så child prosessen skal bli en zombie prosess, men dette må vi sjekke i terminalen for å være sikre. 
+
+<img width="801" alt="Screen Shot 2021-04-28 at 11 12 36 AM" src="https://user-images.githubusercontent.com/79581649/116379544-65299100-a813-11eb-89cc-bd48236f1e47.png">
+
+(figur 3.3)
+
+Etter å ha kompilert koden og lagd et objekt, så skal vi kjøre koden ./zombie.o&. Koden kjører med tegnet "&" bak som betyr at den skal kjøre i bakgrunnen, så vi kan skrive kommandoen ps -l samtiding for å se prosesstatus. Etter ps -l kommandoen er utført får vi en liste over prosessen som kjører, hvor vi må lete under "S" kolonnen. Der ser vi en prosess som har status "zn", som er zombien vi ser etter. Så får vi en prompt om at parent prosessen er ferdig og statusen viser at prosessene er avsluttet. 
+
+
+
 
 
 
