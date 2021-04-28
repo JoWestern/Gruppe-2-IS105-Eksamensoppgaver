@@ -117,9 +117,23 @@ The Collatz conjecture concerns what happens when we take any positive integer n
 For at koden skal kjøre trenger den et argument i form av heltall som den skal regne ut med collatz conjecture. Hvis vi ikke gir den noe tall vil den gi beskjed om at den trenger et argument. Etter vi har gitt den tallet vil den begynne å regne ut ved å bruke teorien bak the collatz conjecture. I eksempelet på figur 3.4 ga vi programmet tallet 10. Programmet begynner da med å sjekke om det er et partall, hvis det er sant vil neste tall være halvparten, hvis tallet nå er et oddetall vil det bli tredoblet og addert med 1, og dette fortsetter fram til tallet blir 1. Prinsippet bak denne formelen er at uansett hvilket positivt tall n man putter inn vil svaret alltid bli 1. 
 
 
+        ---Chapter 3 Modul 3, Oppgave 3.22---
 
+In Exercise 3.21, the child process must output the sequence of numbers generated from the algorithm specified by the Collatz conjecture because the parent and child have their own copies of the data. Another approach to designing this program is to establish a shared-memory object between the parent and child processes. This technique allows the child to write the contents of the sequence to the shared-memory object. The parent can then output the sequence when the child completes. Because the memory is shared, any changes the child makes will be reflected in the parent process as well. This program will be structured using POSIX shared memory as described in Section 3.5. 
 
+1. The parent process will progress through the following steps: Create the child process and wait for it to terminate. 
 
+3. Output the contents of shared memory. 
+
+4. Remove the shared-memory object.  
+
+One area of concern with cooperating processes involves synchronization issues. In this exercise, the parent and child processes must be coordinated so that the parent does not output the sequence until the child finishes execution. These two processes will be synchronized using the wait() system call: the parent process will invoke wait(), which will suspend it until the child process exits. 
+
+<img width="552" alt="Screen Shot 2021-04-28 at 2 01 29 PM" src="https://user-images.githubusercontent.com/79581649/116400467-5bf7ee80-a82a-11eb-83e3-4eb01dd90a56.png">
+
+(figur 3.5)
+
+Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi utbetalinger. 
 
 
 
