@@ -118,7 +118,7 @@ The Collatz conjecture concerns what happens when we take any positive integer n
 For at koden skal kjøre trenger den et argument i form av heltall som den skal regne ut med collatz conjecture. Hvis vi ikke gir den noe tall vil den gi beskjed om at den trenger et argument. Etter vi har gitt den tallet vil den begynne å regne ut ved å bruke teorien bak the collatz conjecture. I eksempelet på figur 3.4 ga vi programmet tallet 10. Programmet begynner da med å sjekke om det er et partall, hvis det er sant vil neste tall være halvparten, hvis tallet nå er et oddetall vil det bli tredoblet og addert med 1, og dette fortsetter fram til tallet blir 1. Prinsippet bak denne formelen er at uansett hvilket positivt tall n man putter inn vil svaret alltid bli 1. 
 
 
-        ---Chapter 3 Modul 3, Oppgave 3.22---
+    ---Chapter 3 Modul 3, Oppgave 3.22---
 
 In Exercise 3.21, the child process must output the sequence of numbers generated from the algorithm specified by the Collatz conjecture because the parent and child have their own copies of the data. Another approach to designing this program is to establish a shared-memory object between the parent and child processes. This technique allows the child to write the contents of the sequence to the shared-memory object. The parent can then output the sequence when the child completes. Because the memory is shared, any changes the child makes will be reflected in the parent process as well. This program will be structured using POSIX shared memory as described in Section 3.5. 
 
@@ -137,7 +137,12 @@ One area of concern with cooperating processes involves synchronization issues. 
 Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi av overhead. Essensen med shared memory er at det blir skapt et shared memory objekt med kommandoen shm_open(), så vil størrelsen bli bestemt av ftruncate(). Deretter må objektet bli kartlagt mmap() og MAP_SHARED, så kan man lese og skrive i dette objektet. Programmet vil så kjøre en fork() som skaper child prosessen som utfører selve collatz conjecture. 
 
 
+    ---Chapter 3 Modul 3, Oppgave 3.23---
 
+Section 3.6.1 describes port numbers below 1024 as being well known—that is, they provide standard services. Port 17 is known as the quote-of-the-day service. When a client connects to port 17 on a server, the server responds with a quote for that day. Modify the date server shown in Figure 3.21 so that it delivers a quote of the day rather than the current date. The quotes should be printable ASCII characters and should contain fewer than 512 characters, although multiple lines are allowed. Since port 17 is well known and therefore un-available, have your server listen to port 6017. The date client shown in Figure 3.22 can be used to read the quotes returned by your server. 
 
+<img width="342" alt="Screen Shot 2021-04-28 at 5 38 55 PM" src="https://user-images.githubusercontent.com/79581649/116432165-b56f1600-a848-11eb-86b8-05d864bef29a.png">
+
+<img width="384" alt="Screen Shot 2021-04-28 at 5 42 10 PM" src="https://user-images.githubusercontent.com/79581649/116432711-1991da00-a849-11eb-82b0-b2a6c124454c.png">
 
 
