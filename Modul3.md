@@ -80,6 +80,8 @@ Including the initial parent process, how many processes are created by the prog
 
 (figur 3.1)
 
+På figuren ser vi at tre fork() kommandoer blir utført, dette har vi forklart at skal ende opp med å bli 8 prosesser til sammen. For å finne ut om dette skjer må vi sjekke status på alle prosessene når programmet kjøres. På figur 3.1.2 ser vi at under kolonnen S ser vi at akkuratt 8 fork prosesser har blitt utført etter hverandre. 
+
 
 <img width="794" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116384200-ebe06d00-a817-11eb-99bd-b71d0e8a151c.png">
 
