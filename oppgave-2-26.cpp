@@ -4,7 +4,7 @@
 //Oppgave 2.26
 
 /**
- * Demonstrasjonsprogram som kopeierer innhold fra en fil til en annen fil, som i eksempelet i README.md filen heter txt-fra.txt og txt-til.txt
+ * Demonstrasjonsprogram som kopeierer innhold fra en fil til en annen fil, som i eksempelet i modul3.md filen heter txt-fra.txt og txt-til.txt
  **/
  
  
