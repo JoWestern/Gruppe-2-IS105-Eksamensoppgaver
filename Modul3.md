@@ -41,7 +41,7 @@ Til slutt åpnet vi filene for å se om oppgaven var fullført og som vi ser på
 <img width="945" alt="Screen Shot 2021-04-27 at 1 36 46 PM" src="https://user-images.githubusercontent.com/79581649/116235032-a52e3c80-a75d-11eb-9bd6-0608a82ac02b.png">
 (figur 1.4)
 
-Her benytter vi DTrace for å se hvordan kjøringen av programmet blir utført.
+Her benytter vi DTrace for å se alle de forskjellige systemkallene programmet må be kernel utføre for å overføre informasjonen.
 
 
 ---Chapter 3, Modul 3, Oppgave 3.1---
@@ -105,6 +105,14 @@ Kildekoden på figur 3.2 viser framgangsmåten for hvordan en zombie prosess bli
 Etter å ha kompilert koden og lagd et objekt, så skal vi kjøre koden ./zombie.o&. Koden kjører med tegnet "&" bak som betyr at den skal kjøre i bakgrunnen, så vi kan skrive kommandoen ps -l samtiding for å se prosesstatus. Etter ps -l kommandoen er utført får vi en liste over prosessen som kjører, hvor vi må lete under "S" kolonnen. Der ser vi en prosess som har status "zn", som er zombien vi ser etter. Så får vi en prompt om at parent prosessen er ferdig og statusen viser at prosessene er avsluttet. 
 
 
+
+---Chapter 3 Modul 3, Oppgave 3.21---
+
+The Collatz conjecture concerns what happens when we take any positive integer n and apply the following algorithm: The conjecture states that when this algorithm is continually applied, all positive integers will eventually reach 1. For example, if n = 35, the sequence is35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1. Write a C program using the fork() system call that generates this sequence in the child process. The starting number will be provided from the command line. For example, if 8 is passed as a parameter on the com-mand line, the child process will output 8, 4, 2, 1. Because the parent and child processes have their own copies of the data, it will be necessary for the child to output the sequence. Have the parent invoke the wait() call to wait for the child process to complete before exiting the program. Per-form necessary error checking to ensure that a positive integer is passed on the command line. 
+
+<img width="509" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116386857-7aee8480-a81a-11eb-9a53-84304474631f.png">
+
+(figur 3.4)
 
 
 
