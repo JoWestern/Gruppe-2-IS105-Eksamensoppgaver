@@ -134,7 +134,7 @@ One area of concern with cooperating processes involves synchronization issues. 
 
 (figur 3.5)
 
-Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi utbetalinger. Essensen med shared memory er at det blir skapt et shared memory objekt med kommandoen shm_open(), så vil størrelsen bli bestemt av ftruncate(). Deretter må objektet bli kartlagt mmap() og MAP_SHARED, så kan man lese og skrive i dette objektet. Programmet vil så kjøre en fork() som skaper child prosessen som utfører selve collatz conjecture. 
+Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi av overhead. Essensen med shared memory er at det blir skapt et shared memory objekt med kommandoen shm_open(), så vil størrelsen bli bestemt av ftruncate(). Deretter må objektet bli kartlagt mmap() og MAP_SHARED, så kan man lese og skrive i dette objektet. Programmet vil så kjøre en fork() som skaper child prosessen som utfører selve collatz conjecture. 
 
 
 
