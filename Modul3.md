@@ -67,7 +67,7 @@ Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdok
 (figur 2.2)
 
 For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out. 
-Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5, som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
+Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5. som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
 
 
 
@@ -79,6 +79,11 @@ Including the initial parent process, how many processes are created by the prog
 <img width="317" alt="Screen Shot 2021-04-27 at 3 19 46 PM" src="https://user-images.githubusercontent.com/79581649/116248286-05c47600-a76c-11eb-8a18-db91025ed779.png">
 
 (figur 3.1)
+
+
+<img width="794" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116384200-ebe06d00-a817-11eb-99bd-b71d0e8a151c.png">
+
+(figur 3.1.2)
 
 
 ---Chapter 3 Modul 3, Oppgave 3.19---
