@@ -1,4 +1,4 @@
----Chapter 2 Modul 3, Oppgave 2.26---
+    ---Chapter 2 Modul 3, Oppgave 2.26---
 
 In Section 2.3, we described a program that copies the contents of one file to a destination file. This program works by first prompting the user for the name of the source and destination files. Write this program using either the Windows or POSIX API. Be sure to include all necessary error checking, including ensuring that the source file exists. 
 
@@ -44,7 +44,7 @@ Til slutt åpnet vi filene for å se om oppgaven var fullført og som vi ser på
 Her benytter vi DTrace for å se alle de forskjellige systemkallene programmet må be kernel utføre for å overføre informasjonen.
 
 
----Chapter 3, Modul 3, Oppgave 3.1---
+    ---Chapter 3, Modul 3, Oppgave 3.1---
 
 Using the program shown in Figure 3.30, explain what the output will be at LINE A.
 
@@ -71,7 +71,7 @@ Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at v
 
 
 
----Chapter 3 Modul 3, Oppgave 3.2---
+    ---Chapter 3 Modul 3, Oppgave 3.2---
 
 Including the initial parent process, how many processes are created by the program shown in Figure 3.31 (referert til som figur 3.1 her)?
 
@@ -88,7 +88,7 @@ På figuren ser vi at tre fork() kommandoer blir utført, dette har vi forklart 
 (figur 3.1.2)
 
 
----Chapter 3 Modul 3, Oppgave 3.19---
+    ---Chapter 3 Modul 3, Oppgave 3.19---
 
 Using either a UNIX or a Linux system, write a C program that forks a child process that ultimately becomes a zombie process. This zombie process must remain in the system for at least 10 seconds. Process states can be obtained from the command ps −l The process states are shown below the S column; processes with a state of Z are zombies. The process identifier (pid) of the child process is listed in the PID column, and that of the parent is listed in the PPID column. Perhaps the easiest way to determine that the child process is indeed a zombie is to run the program that you have written in the background (using the &) and then run the command ps −l to determine whether the child is a zombie process. Because you do not want too many zombie processes existing in the system, you will need to remove the one that you have created. The easiest way to do that is to terminate the parent process using the kill command. For example, if the process id of the parent is 4884, you would enter kill −9 4884.
 
@@ -106,7 +106,7 @@ Etter å ha kompilert koden og lagd et objekt, så skal vi kjøre koden ./zombie
 
 
 
----Chapter 3 Modul 3, Oppgave 3.21---
+    ---Chapter 3 Modul 3, Oppgave 3.21---
 
 The Collatz conjecture concerns what happens when we take any positive integer n and apply the following algorithm: The conjecture states that when this algorithm is continually applied, all positive integers will eventually reach 1. For example, if n = 35, the sequence is 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1. Write a C program using the fork() system call that generates this sequence in the child process. The starting number will be provided from the command line. For example, if 8 is passed as a parameter on the com-mand line, the child process will output 8, 4, 2, 1. Because the parent and child processes have their own copies of the data, it will be necessary for the child to output the sequence. Have the parent invoke the wait() call to wait for the child process to complete before exiting the program. Per-form necessary error checking to ensure that a positive integer is passed on the command line. 
 
