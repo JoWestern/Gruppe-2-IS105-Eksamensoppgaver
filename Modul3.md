@@ -145,4 +145,7 @@ Section 3.6.1 describes port numbers below 1024 as being well known—that is, t
 
 <img width="384" alt="Screen Shot 2021-04-28 at 5 42 10 PM" src="https://user-images.githubusercontent.com/79581649/116432711-1991da00-a849-11eb-82b0-b2a6c124454c.png">
 
+(figur 3.6)
+
+Denne koden baserer seg på port 17 som er kjent som Qoute of the Day (QOTD). Denne tjenesten er en del TCP/IP. En host kan via port 17 koble seg til en server som støtter QOTD-protokollen. På figur 3.6 ser vi at når programmet er startet vil den vente på en kobling på port 17. Porten fra 0-1023 er kjent som systemportene,  de blir brukt av systemprosesser som gir ofte brukte netverkstjenester. På de fleste Unixlignende operativsystemene må man ha administrativ tilgang for å koble seg til en av disse systemportene. Får å gi vårt program et signal på port 17, bruker vi Netcat kommandoen nc localhost 17. Netcat er et redskap for å lese og skrive data over nettverkskoblinger. Den har mange funksjoner hvor noen av de viktigste er debugging, siden den kan lage nesten hvilken som helst kobling man trenger for å teste et program. Det er også det vi gjør i koden for å sende signalet.
 
