@@ -69,8 +69,7 @@ Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdok
 (figur 2.2)
 
 For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out. 
-Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5. som vi ser på figur 2.2 er utfallet etter koden har gjennomført er value = 5, som bekrefter at teorien vår er riktig. 
-
+Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5. Vi ser dette på figur 2.2 hvor utfallet når koden har gjennomført er value = 5, som bekrefter at output på linje A er 5.
 
 
     ---Chapter 3 Modul 3, Oppgave 3.2---
@@ -82,7 +81,7 @@ Including the initial parent process, how many processes are created by the prog
 
 (figur 3.1)
 
-På figuren ser vi at tre fork() kommandoer blir utført, dette har vi forklart at skal ende opp med å bli 8 prosesser til sammen. For å finne ut om dette skjer må vi sjekke status på alle prosessene når programmet kjøres. På figur 3.1.2 ser vi at under kolonnen S ser vi at akkuratt 8 fork prosesser har blitt utført etter hverandre. 
+På figuren ser vi at tre fork()-kommandoer blir utført, dette har vi forklart at skal ende opp med å bli 8 prosesser til sammen. For å finne ut om dette skjer må vi sjekke status på alle prosessene når programmet kjøres. På figur 3.1.2 ser vi at under kolonnen S ser vi at akkuratt 8 fork prosesser har blitt utført etter hverandre. 
 
 
 <img width="794" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116384200-ebe06d00-a817-11eb-99bd-b71d0e8a151c.png">
@@ -135,7 +134,7 @@ One area of concern with cooperating processes involves synchronization issues. 
 
 (figur 3.5)
 
-Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi utbetalinger. 
+Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi utbetalinger. Essensen med shared memory er at det blir skapt et shared memory objekt med kommandoen shm_open(), så vil størrelsen bli bestemt av ftruncate(). Deretter må objektet bli kartlagt mmap() og MAP_SHARED, så kan man lese og skrive i dette objektet. Programmet vil så kjøre en fork() som skaper child prosessen som utfører selve collatz conjecture. 
 
 
 
