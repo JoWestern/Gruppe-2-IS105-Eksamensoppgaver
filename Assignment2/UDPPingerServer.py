@@ -1,33 +1,33 @@
-# This is the UDP server program.
-# This sends the capitalized message to the client.
-# This works on the value od rand.
-# If rand is less than 4 then the response is not sent
-# If rand is greater than or equal to 4 then the response is sent.
+# Dette er UDP Serverprogrammet
+# Den sender en melding i KAPITALISERTE bokstaver til klienten.
+# Lager et rand (tilfeldig) nummer
+# Hvis rand er mindre enn 4 vil ikke responsen bli sendt
+# Hvis rand er større eller lik 4 er responsen sendt.
 
 import random
 from socket import *
 
-# Create a UDP socket
-# We should use SOCK_DGRAM for UDP packets
+# Lager en UDP socket
+# Her brukes SOCK_DGRAM for UDP pakkene, SOCK_STREAM brukes til TCP.
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 
-# Assign IP address and port number to socket
+# Angir IP adresse og port nummer til socket.
 serverSocket.bind(('', 12000))
 
 while True:
 
-	# Generate random number in the range of 0 to 10
+	# genererer et tilfeldig tall mellom 0 og 10
 	rand = random.randint(0, 10)
 
-	# Receive the client packet along with the address it is coming from
+	# Tar imot klienpakken sammen med adressen den kommer fra
 	message, address = serverSocket.recvfrom(1024)
 
-	# Capitalize the message from the client
+	# Omgjør bokstavene til caps
 	message = message.upper()
 
-	# If rand is less is than 4, we consider the packet lost and do not respond
+	# hvis rand er mindre enn 4 anser vi pakken som tapt
 	if rand < 4:
 		continue
 
-	# Otherwise, the server responds
+	# Eller så vil serveren sende meldingen
 	serverSocket.sendto(message, address)
