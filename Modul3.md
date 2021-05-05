@@ -28,11 +28,11 @@ Forprosessoren vil bygge en oversettelsesenhet som den legger alt innhold den fi
 Når den er ferdig vil selve kompileringensfasen starte og objektfilen blir produsert.
 
 For å finne denne oversettelsesenheten kan man bruke g++ -E i terminalen, 
-dette vil gi en fil med ekstremt mye innhold så den vil ikke bli referert til med bilde i denne oppagven.
+dette vil gi et output med ekstremt mye innhold så den vil ikke bli referert til med bilde i denne oppgaven.
 
 Tilbake på figur 1.2 ser vi at etter kompileringen bruker vi ls kommandoen for å se at objektfilen vår har blitt generert, noe den har i form av a.out.
 Deretter eksekverte vi filen ved å skrive ./a.out, og vi ser at koden fungerer siden vi får en prompt om skrive filnavnet vi vil kopiere. 
-Etter å har gitt programmet filen den ønsker vil den begynne å overføre informasjonen fra txt-fra.txt til txt-til.txt, så får vi prompt om at filen er kopiert riktig, og programmet avslutter.
+Etter å har gitt programmet filen den ønsker vil den begynne og overføre informasjonen fra txt-fra.txt til txt-til.txt, så får vi prompt om at filen er kopiert riktig, og programmet avslutter.
 
 <img width="390" alt="Screen Shot 2021-04-27 at 12 38 02 PM" src="https://user-images.githubusercontent.com/79581649/116228341-757b3680-a755-11eb-891f-9295427e5d82.png">
 (figur 1.3)
@@ -68,7 +68,7 @@ Beskrivelse av hvordan koden utføres er beskrevet og forklart i innleveringsdok
 
 (figur 2.2)
 
-For å teste om programmet fungerer så la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out. 
+For å teste om programmet fungerer la vi inn kildekoden i en fil i .cpp format, og kompilerte det med gcc kommandoen som lagde et a.out objekt som vi kjørte med ./a.out. 
 Spørsmålet spør om hvilke output det er på linje A, noe vi vet skal bli at verdien skal være lik 5. Vi ser dette på figur 2.2 hvor utfallet når koden har gjennomført er value = 5, som bekrefter at output på linje A er 5.
 
 
@@ -81,7 +81,7 @@ Including the initial parent process, how many processes are created by the prog
 
 (figur 3.1)
 
-På figuren ser vi at tre fork()-kommandoer blir utført, dette har vi forklart at skal ende opp med å bli 8 prosesser til sammen. For å finne ut om dette skjer må vi sjekke status på alle prosessene når programmet kjøres. På figur 3.1.2 ser vi at under kolonnen S ser vi at akkuratt 8 fork prosesser har blitt utført etter hverandre. 
+På figuren ser vi at tre fork()-kommandoer blir utført, dette har vi forklart at skal ende opp med å bli 8 prosesser til sammen. For å finne ut om dette skjer må vi sjekke status på alle prosessene når programmet kjøres. På figur 3.1.2 ser vi at under kolonnen S og cmd har akkuratt 8 fork prosesser blitt utført etter hverandre. 
 
 
 <img width="794" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116384200-ebe06d00-a817-11eb-99bd-b71d0e8a151c.png">
@@ -103,7 +103,7 @@ Kildekoden på figur 3.2 viser framgangsmåten for hvordan en zombie prosess bli
 
 (figur 3.3)
 
-Etter å ha kompilert koden og lagd et objekt, så skal vi kjøre koden ./zombie.o&. Koden kjører med tegnet "&" bak som betyr at den skal kjøre i bakgrunnen, så vi kan skrive kommandoen ps -l samtiding for å se prosesstatus. Etter ps -l kommandoen er utført får vi en liste over prosessen som kjører, hvor vi må lete under "S" kolonnen. Der ser vi en prosess som har status "zn", som er zombien vi ser etter. Så får vi en prompt om at parent prosessen er ferdig og statusen viser at prosessene er avsluttet. 
+Etter å ha kompilert koden og lagd et objekt, så skal vi kjøre koden ./zombie.o&. Koden kjører med tegnet "&" bak som betyr at den skal kjøre i bakgrunnen, så vi kan skrive kommandoen ps -l samtiding for å se prosesstatus. Etter ps -l kommandoen er utført får vi en liste over prosessene som kjører, hvor vi må lete under "S" kolonnen. Der ser vi en prosess som har status "zn", som er zombien vi ser etter. Til slutt får vi en prompt om at parent prosessen er ferdig og statusen viser at prosessene er avsluttet. 
 
 
 
@@ -115,7 +115,7 @@ The Collatz conjecture concerns what happens when we take any positive integer n
 
 (figur 3.4)
 
-For at koden skal kjøre trenger den et argument i form av heltall som den skal regne ut med collatz conjecture. Hvis vi ikke gir den noe tall vil den gi beskjed om at den trenger et argument. Etter vi har gitt den tallet vil den begynne å regne ut ved å bruke teorien bak the collatz conjecture. I eksempelet på figur 3.4 ga vi programmet tallet 10. Programmet begynner da med å sjekke om det er et partall, hvis det er sant vil neste tall være halvparten, hvis tallet nå er et oddetall vil det bli tredoblet og addert med 1, og dette fortsetter fram til tallet blir 1. Prinsippet bak denne formelen er at uansett hvilket positivt tall n man putter inn vil svaret alltid bli 1. 
+For at koden skal kjøre trenger den et argument i form av heltall som den skal regne ut med collatz conjecture. Hvis vi ikke gir den noe tall vil den gi beskjed om at den trenger et argument. Etter vi har gitt den tallet vil den begynne å regne ut ved å bruke teorien bak the collatz conjecture. I eksempelet på figur 3.4 ga vi programmet tallet 10. Programmet begynner da med å sjekke om det er et partall, hvis det er sant vil neste tall være halvparten, hvis tallet nå er et oddetall vil det bli tredoblet og addert med 1, og dette fortsetter fram til tallet blir 1. Prinsippet bak denne formelen er at uansett hvilket positivt heltall n man putter inn vil svaret alltid bli 1. 
 
 
     ---Chapter 3 Modul 3, Oppgave 3.22---
@@ -134,7 +134,7 @@ One area of concern with cooperating processes involves synchronization issues. 
 
 (figur 3.5)
 
-Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (ICP). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi av overhead. Essensen med shared memory er at det blir skapt et shared memory objekt med kommandoen shm_open(), så vil størrelsen bli bestemt av ftruncate(). Deretter må objektet bli kartlagt mmap() og MAP_SHARED, så kan man lese og skrive i dette objektet. Programmet vil så kjøre en fork() som skaper child prosessen som utfører selve collatz conjecture. 
+Denne koden skal også utføre collatz conjecture men denne gangen bruker vi Posix shared memory. Dette er et rammeverk for inter-prosess kommunikasjon (IPC). Her kan to eller flere jobber lese og skrive i et delt område av minne. Posix skiller seg ut ifra andre IPC-strukturer som socket og pipe, siden den ikke alltid krever kopi av overhead. Essensen med shared memory er at det blir skapt et shared memory objekt med kommandoen shm_open(), så vil størrelsen bli bestemt av ftruncate(). Deretter må objektet bli kartlagt mmap() og MAP_SHARED, så kan man lese og skrive i dette objektet. Programmet vil så kjøre en fork() som skaper child prosessen som utfører selve collatz conjecture. 
 
 
     ---Chapter 3 Modul 3, Oppgave 3.23---
@@ -147,7 +147,7 @@ Section 3.6.1 describes port numbers below 1024 as being well known—that is, t
 
 (figur 3.6)
 
-Denne koden baserer seg på en av regnemaskinens port 17, også kjent som Qoute of the Day (QOTD) protokollen. Denne tjenesten er en del av TCP/IP protokollene. En host kan via port 17 koble seg til en server som støtter QOTD-protokollen. På figur 3.6 ser vi at når programmet er startet vil den vente på en kobling på denne porten. Portene fra 0-1023 er kjent som systemportene,  de blir brukt av systemprosesser som gir ofte brukte netverkstjenester. På de fleste Unixlignende operativsystemene må man ha administrativ tilgang for å koble seg til en av disse systemportene. Får å gi vårt program et signal på port 17, bruker vi Netcat kommandoen nc localhost 17. Netcat er et redskap for å lese og skrive data over nettverkskoblinger. Den har mange funksjoner hvor noen av de viktigste er debugging, siden den kan lage nesten hvilken som helst kobling man trenger for å teste et program. Det er også det vi gjør i koden for å sende signalet. Siden vi sender dette singale, trenger vi ikke høre på port 6017. Etter vi bruker kommandoen vil programmet kjøre og må lese av tekstdokumentet qoute.txt for å plukke ut en tilefldig qoute, som den da sender som et output til brukeren.
+Denne koden baserer seg på regnemaskinens port 17, også kjent som Qoute of the Day (QOTD) protokollen. Denne tjenesten er en del av TCP/IP protokollene. En host kan via port 17 koble seg til en server som støtter QOTD-protokollen og få output av dagens qoute. På figur 3.6 ser vi at når programmet er startet vil den vente på en kobling på denne porten. Portene fra 0-1023 er kjent som systemportene,  de blir brukt av systemprosesser som gir ofte brukte netverkstjenester. På de fleste Unixlignende operativsystemene må man ha administrativ tilgang for å koble seg til en av disse systemportene. Får å gi vårt program et signal på port 17, bruker vi Netcat kommandoen nc localhost 17. Netcat er et redskap for å lese og skrive data over nettverkskoblinger. Den har mange funksjoner hvor en av de viktigste er debugging, siden den kan lage nesten hvilken som helst kobling man trenger for å teste et program. Det er også det vi gjør i koden for å sende signalet. Siden vi sender dette singalet, trenger vi ikke høre på port 6017. Etter vi bruker kommandoen vil programmet kjøre og må lese av tekstdokumentet qotd.txt for å plukke ut en tilefldig qoute, som den da sender som et output til brukeren.
 
     ---Chapter 3 Modul 3, Oppgave 3.26---
     
@@ -155,7 +155,7 @@ Denne koden baserer seg på en av regnemaskinens port 17, også kjent som Qoute 
 
 <img width="437" alt="bilde" src="https://user-images.githubusercontent.com/79581649/116992153-e5e60280-acd5-11eb-9fc4-0494daca05a3.png">
 
-Dette programmet tar meldingen "Hello There" og skal endre hver bokstav fra uppercase til lowercase og omvendt. For å gjøre dette vil programmet loope teksten gjennom en array med chars for å gjøre endringen. Så vil main metoden lage to pipes og kaller en fork. En pipe er en form for enveis kommunikasjon i UNIX OS. En pipe vil sende informasjon fra en program prosess til en annen, men i motsetning til andre IPC, er pipes enveiskommunikasjon. Child prosessen vil lukke pipen, lese av meldingen og omstrukturere meldingen ved å kjøre switcase metoden. Deretter vil parent prosessen lukke pipen, lese meldingen og printe det til brukeren. 
+Dette programmet tar meldingen "Hello There" og skal endre hver bokstav fra uppercase til lowercase og omvendt. For å gjøre dette vil programmet loope teksten gjennom en array med chars for å gjøre endringen. Så vil main metoden lage to pipes og kaller en fork. En pipe er en form for enveis kommunikasjon i UNIX OS. En pipe vil sende informasjon fra en program prosess til en annen, men i motsetning til andre IPC, er pipes enveiskommunikasjon. Child prosessen vil lukke pipen, lese av meldingen og omstrukturere meldingen ved å kjøre switchCase metoden. Deretter vil parent prosessen lukke pipen, lese meldingen og printe det til brukeren. Outputet vi får her vil være "hI THERE!".
 
 
     ---Chapter 2 Modul 4, Oppgave P12---
@@ -164,14 +164,14 @@ Write a simple TCP program for a server that accepts lines of input from a clien
 
 <img width="1057" alt="bilde" src="https://user-images.githubusercontent.com/79581649/117005331-66f9c580-ace7-11eb-9369-dc1f1251db32.png">
 
-Dette programmet består av to filer, en socket_server og en socket_client. Først må vi sette opp serveren ved å kjøre socket_server. Den setter opp en server som lytter på port 5000. Så må vi bruker socket_client som skal koble seg til den samme porten. Ved å kjøre klientprogrammet vil den automatisk koble seg på porten siden det er satt opp i kildekoden. Når koblingen er akseptert kan klienten skrive input til serveren, hvor serveren kan svare med sitt eget input. 
+Dette programmet består av to filer, en socket_server og en socket_client. Først må vi sette opp serveren ved å kjøre socket_server. Den setter opp en server som lytter på port 5000. Så må vi bruke socket_client som skal koble seg til den samme porten. Ved å kjøre klientprogrammet vil den automatisk koble seg på porten siden det er satt opp i kildekoden. Når koblingen er akseptert kan klienten skrive input til serveren som mottar et output, hvor serveren kan svare med sitt eget input som klienten tar imot som output. 
 
 
     ---Chapter 2 Modul 4, Assignment 2---
 
-UDP Pinger In this programming assignment, you will write a client ping program in Python. Your client will send a simple ping message to a server, receive a corresponding pong message back from the server, and determine the delay between when the client sent the ping message and received the pong message. This delay is called the Round Trip Time (RTT). The functionality provided by the client and server is similar to the functionality provided by standard ping program available in modern operating systems. However, standard ping programs use the Internet Control Message Protocol (ICMP) (which we will study in Chapter 4). Here we will create a nonstandard (but simple!) UDP-based ping program. Your ping program is to send 10 ping messages to the target server over UDP. For each message, your client is to determine and print the RTT when the corresponding pong message is returned. Because UDP is an unreliable protocol, a packet sent by the client or server may be lost. For this reason, the client cannot wait indefinitely for a reply to a ping message. You should have the client wait up to one second for a reply from the server; if no reply is received, the client should assume that the packet was lost and print a message accordingly. In this assignment, you will be given the complete code for the server (available in the companion Web site). Your job is to write the client code, which will be very similar to the server code. It is recommended that you first study carefully the server code. You can then write your client code, liberally cutting and pasting lines from the server code.    
+In this programming assignment, you will write a client ping program in Python. Your client will send a simple ping message to a server, receive a corresponding pong message back from the server, and determine the delay between when the client sent the ping message and received the pong message. This delay is called the Round Trip Time (RTT). The functionality provided by the client and server is similar to the functionality provided by standard ping program available in modern operating systems. However, standard ping programs use the Internet Control Message Protocol (ICMP) (which we will study in Chapter 4). Here we will create a nonstandard (but simple!) UDP-based ping program. Your ping program is to send 10 ping messages to the target server over UDP. For each message, your client is to determine and print the RTT when the corresponding pong message is returned. Because UDP is an unreliable protocol, a packet sent by the client or server may be lost. For this reason, the client cannot wait indefinitely for a reply to a ping message. You should have the client wait up to one second for a reply from the server; if no reply is received, the client should assume that the packet was lost and print a message accordingly. In this assignment, you will be given the complete code for the server (available in the companion Web site). Your job is to write the client code, which will be very similar to the server code. It is recommended that you first study carefully the server code. You can then write your client code, liberally cutting and pasting lines from the server code.    
     
     
 <img width="634" alt="bilde" src="https://user-images.githubusercontent.com/79581649/117011415-1b96e580-acee-11eb-9c0b-d99ce71b805a.png">
   
-Dette er også et program hvor man først må sette opp og starte en server, noe vi gjorde i terminalen. Deretter må vi starte klientprogrammet og gi den riktig argumenter i form av hosten sitt navn og porten serveren kjører på. Når vi kjøren den koden med Python3 kommandoen vi den begynne å pinge serveren. Pinging fungerer litt på samme måte som sonar, hvor du sender ut et signal og sjekker hvor lang tid det tar før den returnerer. I vår kode skal vi pinge serveren 10 ganger og finne ut hvor lang tid det tar å kontakte serveren. Hvor hvert ping vil serveren genere et tilfeldig nummer, hvis dette nummeret er mindre enn 4 vil serveren sende en timeout melding. Hvis det er større enn 4 vil den sende tilbakemelding med Round trip tiden (RRT) til klienten.
+Dette er også et program hvor man først må sette opp og starte en server, noe vi satt opp i terminalen. Når vi kjører klientprogrammet og gir den riktig argumenter i form av hosten sitt navn og porten serveren kjører på kan vi oppnå en kobling. Når vi kjøren den koden med Python3 kommandoen vi den begynne å pinge serveren. Pinging fungerer litt på samme måte som sonar, hvor du sender ut et signal og sjekker hvor lang tid det tar før den returnerer. I vår kode skal vi pinge serveren 10 ganger og finne ut hvor lang tid det tar å kontakte serveren. For hvert ping vil serveren genere et tilfeldig nummer mellom 0 og 10, hvis dette nummeret er mindre enn 4 vil serveren sende en timeout melding. Hvis det er større enn 4 vil den sende tilbakemelding med round trip tiden (RRT) til klienten.  RTT er hvor lang tid det tar for et signal å bli sendt pluss tiden det tar å få godkjenning at signalet er mottat. Til slutt får vi se alle pingsene serveren mottok som et output i terminalen.
