@@ -1,17 +1,17 @@
-# This is the UDP client program.
-# This sends the message to the sever.
-# This program calculates RTT of the different messages.
-# It then prints the RTT of each request.
-# If the waiting time is more than 1 second then the packet is considered lost and a time out is issued.
+# Dette er UDP klientprogrammet
+# Dette sender melding til serveren,
+# og kalkulerer RTT-tiden til de forskjellige meldingene.
+# Så printer den RTT til hver melding
+# Hvis ventetiden er mer enn ett sekund vil pakken bli ansett som mistet og det blir utløst en timeout
 
-# Import socket module
-# Import time and ctime to retrieve time
-# Import sys to retrieve the arguments
+# Importerer socket module
+# Importerer time og ctime for å få tiden
+# Importerer sys for å få argumentene
 from socket import *
 from time import time, ctime
 import sys
 
-# Inputs three arguments.
+# Denne inputer tre argumenter
 
 if (len(sys.argv) != 3):
     print(len(sys.argv))
@@ -19,30 +19,30 @@ if (len(sys.argv) != 3):
     print("Use: UDPPingClient.py <server_host> <server_port>")
     sys.exit()
 
-# Preparing the socket
+# klargjør nettverkssocketen
 serverHost, serverPort = sys.argv[1:]
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 clientSocket.settimeout(1)
 
-# Send and receive 10 requests.
+# Sender og tar imot de 10 forespørselene
 for i in range(10):
-    startTime = time() # Retrieve the current time
+    startTime = time() # Bruker den nåværende tiden
     message = "Ping " + str(i+1) + " " + ctime(startTime)[11:19]
 
     try:
 
-        # Sending the message and waiting for the answer
+        # Dette sender meldingen og venter på svar.
         clientSocket.sendto(message.encode(),(serverHost, int(serverPort)))
         encodedModified, serverAddress = clientSocket.recvfrom(1024)
 
-        # Checking the current time and if the server answered
+        # Sjekker om den nåværende tiden og om serveren svarer
         endTime = time()
 
-        # Modified message is  decoded.
+        # Den modifiserte meldingen blir dekodet.
         modifiedMessage = encodedModified.decode()
         print(modifiedMessage)
 
-        # Prints the RTT
+        # Printer RTT
         print("Round Trip Time: %.3f ms\n" % ((endTime - startTime)*1000))
     except:
         print("PING %i Request timed out\n" % (i+1))
