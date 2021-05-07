@@ -2,17 +2,28 @@
 #include <stdio.h>
 #include <unistd.h>
 int value = 5;
+
 int main()
 {
-pid t pid;
-pid = fork();
-if (pid == 0) { / child process /
-value += 15;
-return 0;
-}
-else if (pid > 0) { / parent process /
-wait(NULL);
-printf("PARENT: value = %d",value); / LINE A /
-return 0;
-}
+  pid t pid;
+  
+  //utrløser en fork()
+  pid = fork();
+  
+  //Sjekker om det er child prosessen
+  if (pid == 0) { 
+    
+    //Legger til 15 på verdien
+    value += 15;
+    return 0;
+  }
+  
+  //Sjekker om det er parent prosessen
+  else if (pid > 0) { 
+    //Verdien fra child prosessen vil ikke bli oppdatert i parent prosessen
+    wait(NULL);
+    //Siden verdien ikke er endre vil output bli 5.
+    printf("PARENT: value = %d",value); 
+    return 0;
+  }
 }
