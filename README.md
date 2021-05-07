@@ -1,4 +1,4 @@
-# Gruppe-2-IS105-Eksamensoppgave
+# Gruppe-2-IS105-Eksamensoppgaver
 
 Vi på gruppe 2 har lagd dette repository'et for å gå gjennom programmeringsoppgaver i module 3 og 4 til innleveringseksamen i IS-105.
 I repositoy'et er det en modul.md fil som inneholder alle programmersingsoggaver i modul 3 og 4 med svar, visning og eksempler av kode fra terminal.
