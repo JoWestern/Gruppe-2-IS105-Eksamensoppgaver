@@ -1,6 +1,6 @@
 # Gruppe-2-ProgrammingProblems
 
-Vi på gruppe to har lagd dette repository'et for å går gjennom programmeringsoppgaver i module 3 og 4 til innleveringseksamen i IS-105.
+Vi på gruppe to har lagd dette repository'et for å gå gjennom programmeringsoppgaver i module 3 og 4 til innleveringseksamen i IS-105.
 I repositoy'et er det en modul.md fil som inneholder alle programmersingsoggaver i modul 3 og 4 med svar, visning og eksempler av kode fra terminal.
 Kildekode med kommentarer ligger i mappen "kildekode" hvor filene har navn fra oppgavene de hører til.
 
