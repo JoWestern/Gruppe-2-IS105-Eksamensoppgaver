@@ -7,7 +7,7 @@ int main()
 {
   pid t pid;
   
-  //utrløser en fork()
+  //utløser en fork
   pid = fork();
   
   //Sjekker om det er child prosessen
@@ -22,7 +22,7 @@ int main()
   else if (pid > 0) { 
     //Verdien fra child prosessen vil ikke bli oppdatert i parent prosessen
     wait(NULL);
-    //Siden verdien ikke er endre vil output bli 5.
+    //Siden verdien ikke er endret vil output bli 5.
     printf("PARENT: value = %d",value); 
     return 0;
   }
