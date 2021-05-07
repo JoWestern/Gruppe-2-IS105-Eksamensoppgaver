@@ -25,8 +25,9 @@ def server_program():
         data = input(' -> ')
         conn.send(data.encode())  # sender data til klienten
 
-    conn.close()  # ukker koblingen
+    conn.close()  # Lukker koblingen
 
 
+    #Dette er kjent som "boilerplate" kode som beskytter mot feil under importering og kjøring av flere programmer.
 if __name__ == '__main__':
     server_program()
