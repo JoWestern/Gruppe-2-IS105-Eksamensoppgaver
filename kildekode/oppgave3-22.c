@@ -9,7 +9,7 @@
 #include <sys/types.h>
 
 int main(int argc, char **argv){
-    /*Først lager vi et delt område for minnet.*/
+    /*Først lager vi et område i minnet som kan deles.*/
     const int SIZE = 4096;
     const char *name ="OS";
     const int BUFFER_SIZE = 1024;
