@@ -6,13 +6,13 @@ In Section 2.3, we described a program that copies the contents of one file to a
 
 Once you have correctly designed and tested the program, if you used a system that supports it, run the program using a utility that traces system calls. Linux systems provide the strace utility, and Solaris and Mac OSX systems use the dtrace command. As Windows systems do not provide such features, you will have to trace through the Windows version of this program using a debugger. 
 
-Hennviser til kildekode i repository fil: oppgave-2-26
+Hennviser til kildekode i repository fil: oppgave2-26
 
 <img width="1152" alt="Screen Shot 2021-04-27 at 11 59 03 AM" src="https://user-images.githubusercontent.com/79581649/116223635-02bb8c80-a750-11eb-9603-ca4d7e355a60.png">
 (figur 1.1)
 
 Først og fremst for å vite at alt skal fungere riktig når vi og andre skal bruke denne koden må vi sjekke hvilken versjon vi har.
-Vi bruker kommandoen g++ --version for å få nødvendig informasjon, og som vi ser bruker vi i dette eksempelet clang versjon 12.0.0.
+Vi bruker kommandoen g++ --version for å få nødvendig informasjon, og som vi ser bruker vi i alle eksempelene clang versjon 12.0.0.
 
 
 <img width="555" alt="Screen Shot 2021-04-27 at 11 52 59 AM" src="https://user-images.githubusercontent.com/79581649/116222787-2e8a4280-a74f-11eb-861d-1d973253e7ca.png">
