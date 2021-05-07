@@ -1,4 +1,4 @@
- Kildekode til hvert eksempel ligger i form av oppgavex-x.c/cpp i repository.
+ Kildekode til hvert eksempel ligger i form av oppgavex-x. i repository.
    
    ---Chapter 2 Modul 3, Oppgave 2.26---
 
