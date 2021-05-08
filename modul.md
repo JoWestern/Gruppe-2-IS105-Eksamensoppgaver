@@ -170,6 +170,12 @@ Dette programmer benytter seg av Java sin BufferedReader og InputStream for å l
 Dette programmet tar meldingen "Hello There" og skal endre hver bokstav fra uppercase til lowercase og omvendt. For å gjøre dette vil programmet loope teksten gjennom en array med chars for å gjøre endringen. Så vil main metoden lage to pipes og kaller en fork. En pipe er en form for enveis kommunikasjon i UNIX OS. En pipe vil sende informasjon fra en program prosess til en annen, men i motsetning til andre IPC, er pipes enveiskommunikasjon. Child prosessen vil lukke pipen, lese av meldingen og omstrukturere meldingen ved å kjøre switchCase metoden. Deretter vil parent prosessen lukke pipen, lese meldingen og printe det til brukeren. Outputet vi får her vil være "hI THERE!".
 
 
+![bilde](https://user-images.githubusercontent.com/79581649/117549344-3218a600-b03a-11eb-90ef-d1277a6e670c.png)
+
+Her er den samme koden kjørt på Windows OS. Koden er kjørt fra WSL og det var forventet at det skulle oppstå problemer med feilmeldinger, men programmet funket rett ut av github. Dette var overaskende fordi det er mye komplikasjoner med å bytte fra Mac som er mer Unix/Linux lignende, noe Windows kan slite med å være kompatibel med. Koden her oppnådde akkurat det samme som på Mac-eksempelet.
+
+
+
     ---Chapter 2 Modul 4, Oppgave P12---
     
 Write a simple TCP program for a server that accepts lines of input from a client and prints the lines onto the server’s standard output. (You can do this by modifying the TCPServer.py program in the text.) Compile and execute your program. On any other machine that contains a Web browser, set the proxy server in the browser to the host that is running your server program; also configure the port number appropriately. Your browser should now send its GET request messages to your server, and your server should display the messages on its standard output. Use this platform to determine whether your browser generates conditional GET messages for objects that are locally cached.
