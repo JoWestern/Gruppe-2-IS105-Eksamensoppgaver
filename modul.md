@@ -117,6 +117,10 @@ The Collatz conjecture concerns what happens when we take any positive integer n
 
 For at koden skal kjøre trenger den et argument i form av heltall som den skal regne ut med collatz conjecture. Hvis vi ikke gir den noe tall vil den gi beskjed om at den trenger et argument. Etter vi har gitt den tallet vil den begynne å regne ut ved å bruke teorien bak the collatz conjecture. I eksempelet på figur 3.4 ga vi programmet tallet 10. Programmet begynner da med å sjekke om det er et partall, hvis det er sant vil neste tall være halvparten, hvis tallet nå er et oddetall vil det bli tredoblet og addert med 1, og dette fortsetter fram til tallet blir 1. Prinsippet bak denne formelen er at uansett hvilket positivt heltall n man putter inn vil svaret alltid bli 1. 
 
+![bilde](https://user-images.githubusercontent.com/79581649/117549931-735e8500-b03d-11eb-9fd2-d3e614828075.png)
+
+Her har kodet blitt kjørt i WSL på Windows. Det var ikke noe merkbar forskjell på utførelse av koden på Windows i forhold til MacOS, det var heller ingen komplikasjoner eller feilmeldinger med koden etter den var tatt fra repository med git pull. Siden WSL er Windows Subsystem for Linux skal kodene fungere selv om de er overført mellom operativsystemene. Derimot har Linuxkode noen systemkall og #include mapper i C-språkene som ikke alltid er kompitable på Windows, noe som har gjort at det oppstått problemer i andre oppgaver. Her var koden plettfri mest sannsynlig fordi det er en enkel utregningsalgoritme uten krevende og dype systemkall.
+
 
     ---Chapter 3 Modul 3, Oppgave 3.22---
 
