@@ -1,3 +1,4 @@
+//Nødvendige importeringer
 #include <cstdio>
 #include <cstdlib>
 #include <unistd.h>
@@ -12,6 +13,8 @@
 #include <vector>
 #include <iostream>
 #include <cstring>
+
+//Defienerer porten som skal brukes til å være 17.
 
 #define PORT "17"
 #define BACKLOG 10
@@ -28,11 +31,11 @@ void *get_in_addr(struct sockaddr *sa) {
 
 int main(int argc, char* argv[]) {
 	vector<string> quotes;
-	string filename = "../qotd.txt";
+	string filename = "../qotd.txt";  //Definerer filen som skal leses av til å være qotd.txt
 	if(argc == 2) {
 		filename = argv[1];
 	}
-	ifstream file(filename.c_str());
+	ifstream file(filename.c_str()); //Hvordan qouten blir printet
 	string line;
 	while(getline(file, line)) {
 		int k = line.find("|");
