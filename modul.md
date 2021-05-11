@@ -1,4 +1,5 @@
- Kildekode til hvert eksempel ligger i form av oppgavex-x. i repository.
+Hei 
+Kildekode til hvert eksempel ligger i form av oppgavex-x. i repository.
    
    ---Chapter 2 Modul 3, Oppgave 2.26---
 
