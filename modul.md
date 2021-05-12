@@ -1,7 +1,7 @@
 
 Kildekode til hvert eksempel ligger i form av oppgavex-x. i repository.
    
-   ---Chapter 2 Modul 3, Oppgave 2.26---
+      ---Chapter 2 Modul 3, Oppgave 2.26---
 
 In Section 2.3, we described a program that copies the contents of one file to a destination file. This program works by first prompting the user for the name of the source and destination files. Write this program using either the Windows or POSIX API. Be sure to include all necessary error checking, including ensuring that the source file exists. 
 
