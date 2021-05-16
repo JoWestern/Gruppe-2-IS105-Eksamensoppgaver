@@ -1,3 +1,12 @@
+/*
+* Modul 3
+* Oppgave 3.22
+*
+* Denne oppgaven har samme formål som oppgave 3.21 med å bruke collatz conjecture algoritme,
+* men her skal vi bruke Posix shared memory for å bruke et delt minne-objekt.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,11 +27,11 @@ int main(int argc, char **argv){
 
     shm_fd = shm_open(name,O_CREAT | O_RDWR,0666);
 
-    ftruncate(shm_fd,SIZE);/*Korter ned filen*/
+    ftruncate(shm_fd,SIZE);/* Korter ned filen */
 
-    ptr = mmap(0,SIZE,PROT_WRITE,MAP_SHARED,shm_fd,0);/* Kartlegger filen i minnet*/
+    ptr = mmap(0,SIZE,PROT_WRITE,MAP_SHARED,shm_fd,0);/* Kartlegger filen i minnet */
 
-    /*Så lager vi prosessen*/
+    /* Så lager vi prosessen* /
     pid_t pid;
     pid = fork();
     if (pid < 0){
@@ -31,7 +40,7 @@ int main(int argc, char **argv){
         return 1;
     }
     else if (pid ==0){
-        /*child prosessen*/
+        /* child prosessen */
         char buffer[BUFFER_SIZE];
         memset(buffer,0,sizeof(char)*BUFFER_SIZE);
         char *buffer_p = &buffer[0];
@@ -62,7 +71,7 @@ int main(int argc, char **argv){
         printf("The data to shared memory has written.\n"); /* Prompt når den ferdigstilles */
     }
     else{
-        /*Parent prosessen*/
+        /* Parent prosessen */
         wait(NULL);
         printf("Reading the shared memory\n");
         shm_fd = shm_open(name,O_RDONLY, 0666);
