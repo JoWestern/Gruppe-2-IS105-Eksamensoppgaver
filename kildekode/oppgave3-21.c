@@ -1,3 +1,11 @@
+/*
+* Modul 3
+* Oppgave 3.21
+*
+* Med denne koden ønsker å få et input fra klienten i form av heltall (int),
+* og bruke collatz conjecture algoritme for å regne det ut.
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/wait.h>
