@@ -1,3 +1,9 @@
+// Modul 3
+
+// Oppgave 3.22
+
+// Med dette programmet skal brukeren koble seg på quote of the day port 17, og få tilsendt dagens sitat.
+
 //Nødvendige importeringer
 #include <cstdio>
 #include <cstdlib>
