@@ -1,3 +1,6 @@
+# Modul 4
+# Assignment 2
+
 # Dette er UDP Serverprogrammet
 # Den sender en melding i KAPITALISERTE bokstaver til klienten.
 # Lager et rand (tilfeldig) nummer
