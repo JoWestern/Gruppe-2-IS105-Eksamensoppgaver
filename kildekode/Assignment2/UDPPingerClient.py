@@ -1,3 +1,6 @@
+# Modul 3
+# Assignment 2
+
 # Dette er UDP klientprogrammet
 # Dette sender melding til serveren,
 # og kalkulerer RTT-tiden til de forskjellige meldingene.
