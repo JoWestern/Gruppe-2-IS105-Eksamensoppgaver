@@ -1,3 +1,10 @@
+/*
+* Modul 3
+* Oppgave 3.1
+*
+* Med dette programmet tester vi hva som skjer når vi utløser en fork og hvilke output vi får på variabelen vi har definert. 
+*/
+
 #include <sys/types.h>
 #include <stdio.h>
 #include <unistd.h>
