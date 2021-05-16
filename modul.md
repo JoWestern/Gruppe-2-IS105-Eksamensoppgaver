@@ -89,6 +89,8 @@ På figuren ser vi at tre fork()-kommandoer blir utført, dette har vi forklart 
 
 (figur 3.1.2)
 
+Vi kan også se under PID og PPID kolonnene for å se hvilke prosesser som hører til hvilken parent, dette er nyttig siden vi da kan se for oss et prosesstre med parent og child for å visualisere hvordan programmet ble utført.
+
 
     ---Chapter 3 Modul 3, Oppgave 3.19---
 
@@ -98,7 +100,7 @@ Using either a UNIX or a Linux system, write a C program that forks a child proc
 
 (figur 3.2)
 
-Kildekoden på figur 3.2 viser framgangsmåten for hvordan en zombie prosess blir dannet. For at zombien skal bli dannet i vår kode så må child prosessen avsluttes uten at parent prosessen har utløst en wait() kommando. Her vil child prosessen utløse en exit() som sender et signal til parent prosessen som ikke blir oppfattet så child prosessen skal bli en zombie prosess, men dette må vi sjekke i terminalen for å være sikre. 
+Kildekoden på figur 3.2 viser framgangsmåten for hvordan en zombie prosess blir dannet. For at zombien skal bli dannet i vår kode så må child prosessen avsluttes uten at parent prosessen har utløst en wait() kommando. Her vil child prosessen utløse en exit() som sender et signal til parent prosessen som ikke blir oppfattet ettersom parent ikke har noe wait(). Så vår child prosess skal bli en zombie prosess, men dette må vi sjekke i terminalen for å være sikre. 
 
 <img width="801" alt="Screen Shot 2021-04-28 at 11 12 36 AM" src="https://user-images.githubusercontent.com/79581649/116379544-65299100-a813-11eb-89cc-bd48236f1e47.png">
 
@@ -152,7 +154,7 @@ Section 3.6.1 describes port numbers below 1024 as being well known—that is, t
 
 (figur 3.6)
 
-Denne koden baserer seg på regnemaskinens port 17, også kjent som Quote of the Day (QOTD) protokollen. Denne tjenesten er en del av TCP/IP protokollene. En host kan via port 17 koble seg til en server som støtter QOTD-protokollen og få output av dagens qoute. På figur 3.6 ser vi at når programmet er startet vil den vente på en kobling på denne porten. Portene fra 0-1023 er kjent som systemportene,  de blir brukt av systemprosesser som gir ofte brukte netverkstjenester. På de fleste Unixlignende operativsystemene må man ha administrativ tilgang for å koble seg til en av disse systemportene. Får å gi vårt program et signal på port 17, bruker vi Netcat kommandoen nc localhost 17. Netcat er et redskap for å lese og skrive data over nettverkskoblinger. Den har mange funksjoner hvor en av de viktigste er debugging, siden den kan lage nesten hvilken som helst kobling man trenger for å teste et program. Det er også det vi gjør i koden for å sende signalet. Siden vi sender dette singalet, trenger vi ikke høre på port 6017. Etter vi bruker kommandoen vil programmet kjøre og må lese av tekstdokumentet qotd.txt for å plukke ut en tilefldig qoute, som den da sender som et output til brukeren.
+Denne koden baserer seg på regnemaskinens port 17, også kjent som Quote of the Day (QOTD) protokollen. Denne tjenesten er en del av TCP/IP protokollene. En host kan via port 17 koble seg til en server som støtter QOTD-protokollen og få output av dagens qoute. På figur 3.6 ser vi at når programmet er startet vil den vente på en kobling på denne porten. Portene opptil 1024 er kjent som systemportene,  de blir brukt av systemprosesser som gir ofte brukte netverkstjenester. På de fleste Unixlignende operativsystemene må man ha administrativ tilgang for å koble seg til en av disse systemportene. Får å gi vårt program et signal på port 17, bruker vi Netcat kommandoen nc localhost 17. Netcat er et redskap for å lese og skrive data over nettverkskoblinger. Den har mange funksjoner hvor en av de viktigste er debugging, siden den kan lage nesten hvilken som helst kobling man trenger for å teste et program. Det er også det vi gjør i koden for å sende signalet. Siden vi sender dette singalet, trenger vi ikke høre på port 6017. Etter vi bruker kommandoen vil programmet kjøre og må lese av tekstdokumentet qotd.txt for å plukke ut en tilefldig qoute, som den da sender som et output til brukeren.
 
    
     ---Chapter 3 Modul 3, Oppgave 3.25---
@@ -197,4 +199,4 @@ In this programming assignment, you will write a client ping program in Python. 
     
 <img width="634" alt="bilde" src="https://user-images.githubusercontent.com/79581649/117011415-1b96e580-acee-11eb-9c0b-d99ce71b805a.png">
   
-Dette er også et program hvor man først må sette opp og starte en server, noe vi satt opp i terminalen. Når vi kjører klientprogrammet og gir den riktig argumenter i form av hosten sitt navn og porten serveren kjører på kan vi oppnå en kobling. Når vi kjøren den koden med Python3 kommandoen vi den begynne å pinge serveren. Pinging fungerer litt på samme måte som sonar, hvor du sender ut et signal og sjekker hvor lang tid det tar før den returnerer. I vår kode skal vi pinge serveren 10 ganger og finne ut hvor lang tid det tar å kontakte serveren. For hvert ping vil serveren genere et tilfeldig nummer mellom 0 og 10, hvis dette nummeret er mindre enn 4 vil serveren sende en timeout melding. Hvis det er større enn 4 vil den sende tilbakemelding med round trip tiden (RRT) til klienten.  RTT er hvor lang tid det tar for et signal å bli sendt pluss tiden det tar å få godkjenning at signalet er mottat. Til slutt får vi se alle pingsene serveren mottok som et output i terminalen.
+Dette er også et program hvor man først må sette opp og starte en server, noe vi satt opp i terminalen. Når vi kjører klientprogrammet og gir den riktig argumenter i form av hosten sitt navn og porten serveren kjører på kan vi oppnå en kobling. Når vi kjøren den koden med Python3 kommandoen vil den begynne å pinge serveren. Pinging fungerer litt på samme måte som sonar, hvor du sender ut et signal og sjekker hvor lang tid det tar før den returnerer. I vår kode skal vi pinge serveren 10 ganger og finne ut hvor lang tid det tar å kontakte serveren. For hvert ping vil serveren genere et tilfeldig nummer mellom 0 og 10, hvis dette nummeret er mindre enn 4 vil serveren sende en timeout melding. Hvis det er større enn 4 vil den sende tilbakemelding med round trip tiden (RRT) til klienten.  RTT er hvor lang tid det tar for et signal å bli sendt pluss tiden det tar å få godkjenning at signalet er mottat. Til slutt får vi se alle pingsene serveren mottok som et output i terminalen.
