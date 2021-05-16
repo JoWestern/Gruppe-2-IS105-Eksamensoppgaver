@@ -1,11 +1,11 @@
                                                        /* --Kildekode til Prgogramming Problems-- */
-//Modul 3
-
-//Oppgave 2.26
-
-/**
- * Demonstrasjonsprogram som kopeierer innhold fra en fil til en annen fil, som i eksempelet i modul3.md filen heter txt-fra.txt og txt-til.txt
- **/
+/* Modul 3
+*
+* Oppgave 2.26
+*
+* Demonstrasjonsprogram som kopeierer innhold fra en fil til en annen fil, som i eksempelet i modul3.md filen heter txt-fra.txt og txt-til.txt
+*
+*/
  
  
 //#include importerer de nødvendige hodefilene
