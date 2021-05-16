@@ -1,3 +1,9 @@
+/* Modul 3
+*  Oppgave 3.25
+*
+* Dette programmet skal lage en EchoServer som gjør har som mål å ta imot meldinger fra klienten og sende dem tilbake som et ekko.
+*/
+
 import java.net.*;
 import java.io.*;
 
