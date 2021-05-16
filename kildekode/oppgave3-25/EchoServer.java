@@ -14,7 +14,7 @@ public class EchoServer {
 	System.exit(1);
 	}
 
-      // Venter på koblingen og bruker try catch for å finne IOExeptions
+      // Venter på koblingen og bruker try catch for å finne IOExeptions, slik at programmer ikke krasjer hvis feil oppstår
 	Socket clientSock = null;
 	System.out.println("[+]Listening for connection...");
 	try {
