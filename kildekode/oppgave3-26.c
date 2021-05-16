@@ -1,3 +1,11 @@
+/*
+* Modul 3
+* Oppgave 3.26
+*
+* Denne koden skal ta imot en melding og bytte om slik at upper case bokstaver blir lower case og omvendt.
+*/
+
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
