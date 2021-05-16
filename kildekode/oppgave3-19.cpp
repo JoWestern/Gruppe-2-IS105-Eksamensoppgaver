@@ -1,3 +1,11 @@
+/*
+* Modul 3
+* Oppgave 3.19
+*
+* Med denne koden vil målet være å utløse en fork og få parent til å sove mens child printer et output, 
+* her prøver vi å se i hvilken rekkefølge programmet blir utløst.
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
