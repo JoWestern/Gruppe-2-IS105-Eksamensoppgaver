@@ -22,6 +22,6 @@ def client_program():
     client_socket.close()  # lukker koblingen
 
   # Dette er kjent som "boilerplate" kode som er repetert kode med lite variasjon. 
-  # Denne koden er en beskyttelse for at ikke feil kode skal bli utfør når flere programmer kjøres samtidig. Spesielt hvis denne koden blir importert.
+  # Denne koden er en beskyttelse for at ikke feil kode skal bli utført når flere programmer kjøres samtidig. Spesielt hvis denne koden blir importert.
 if __name__ == '__main__':
     client_program()
